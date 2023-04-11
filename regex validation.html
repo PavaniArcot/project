@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Form Validation</title>
+</head>
+<body>
+  <h3>Sign Up</h3>
+  <form onsubmit=" validateForm()">
+    <label for="name">Name:</label><br>
+    <input type="text" id="name" name="name"><br>
+    <label for="email">Email:</label><br>
+    <input type="email" id="email" name="email"><br>
+    <label for="password">Password:</label><br>
+    <input type="password" id="password" name="password"><br>
+    <label for="confirm-password">Confirm Password:</label><br>
+    <input type="password" id="confirm password" name="confirm password"><br>
+    <input type="submit" value="Sign Up">
+  </form>
+  <script>
+    function validateForm() {
+      const name = document.getElementById("name").value;
+      const email = document.getElementById("email").value;
+      const password = document.getElementById("password").value;
+      const confirmPassword = document.getElementById("confirm password").value;
+
+      const namePattern = /^[a-zA-Z]+$/;
+      if (!namePattern.test(name)) {
+        alert("Name can only contain letters ");
+        
+      }
+      const emailPattern = /^ [a-z@] $/;
+      if(!emailPattern.test(email)) {
+        alert("Please enter a valid email address");
+        
+      }
+      const passwordPattern = /^[a-zA-Z!@#$%^&*()-+]{6,12}$/;
+      if (!passwordPattern.test(password)) {
+        alert("Password must be at least 6 characters and contain at least one uppercase letter, one lowercase letter, and one number");
+        
+      }
+       if (password !== confirmPassword) {
+        alert("Passwords do not match");
+        
+      }
+
+     else{
+      alert("Form submitted successfully");
+      }
+    }
+    
+  </script>
+</body>
+</html>
+
+
+

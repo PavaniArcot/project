@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+                //synchrnous function---all javascript are synchronous function code is executed as step by step
+        /*console.log("hello")
+        console.log("hi")
+        console.log("good morning")*/ 
+
+        //asynchrnous function---
+        /*console.log("hello")
+        setTimeout(()=>{
+        console.log("hi")
+        },3000)
+        console.log("good morning")*/ 
+
+        //promises----handles the async functions
+        //it required two promises-----resolve -success---then()
+                                 //-----reject -failure----catch()----handle the errors
+        //syntax
+        /*let x=new Promise((resolve,reject)=>{
+        let a=100
+        let b=200
+        if(a=="100" && b=="200"){
+            resolve("success")
+        }
+        else{
+            reject("failure")
+        }
+        })
+        x.then((msg)=>{
+        console.log(msg)
+        })
+        x.catch((msg)=>{
+            console.log(msg) 
+        })*/ 
+
+
+       //API---application programming interface--it is used to get data
+       //fetch()---data transfer one server to another server--it required "apiurl"
+       //json---javscript object notation
+       //it is used to interchange the data
+
+       function data(){
+        fetch("https://jsonplaceholder.typicode.com/posts")
+        .then((res) => {
+        return res.json()
+        })
+        .then((res)=>{
+            console.log(res)
+        })
+        .catch((err)=>{
+            console.log(err)
+        })
+       }
+       data()
+
+       //asynchronous----always return one promise--await is used to solve the problem here
+    async function helo(){
+        let x=new Promise((resolve,reject)=>{
+            setTimeout(()=>{
+        resolve("helo good morning")
+            },3000)
+        })
+        let y=await x
+        console.log(y)
+
+    }
+    helo()
+    </script>
+    
+</body>
+</html>

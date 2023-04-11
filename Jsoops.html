@@ -1,0 +1,274 @@
+<html>
+    <head>
+        <title>document</title>
+        </head>
+        <body>
+            <script>
+            //oops--objected oriented programming--object and class  are there 
+
+            //class---collection of functions 
+            //methods
+            //objects 
+            //inheritance 
+            //polymorphism 
+            //encapsulation 
+            //data abstaraction 
+           
+            //constructor function---it is a function.it is used to define insistance of object
+            
+            /*function myFunction(name,city,state,country){
+                //instance variable and object
+                this.a=name 
+                this.b=city 
+                this.c=state 
+                this.d=country
+
+                //method
+                this.myName=function(){
+                    let x=`Name:${this.a}\ncity:${this.b}\nstate:${this.c}\ncountry:${this.d}`
+                    console.log(x)
+                }
+            
+            
+            
+            }
+            let y=new myFunction("raghav","bangloore","karnataka","india")
+            y.myName()
+            let z=new myFunction("vijay","bangloore","karnataka","india")
+            z.myName()
+
+            class helo{
+                constructor(){
+                    console.log("parent class")
+
+                }
+            }
+            class helo1 extends helo{
+                constructor(){
+                    super()
+                    console.log("child class")
+                }
+            }
+
+
+
+            class MyName extends helo1{
+            constructor(name,city,state,country,c){
+                super(c)
+                //instance variable and object
+                this.a=name 
+                this.b=city 
+                this.c=state 
+                this.d=country
+            }
+               MyName=function(){
+                    let x=`Name:${this.a}\ncity:${this.b}\nstate:${this.c}\ncountry:${this.d}`
+                    console.log(x)
+                }
+            }
+            let a=new MyName("raghav","bangloore","karnataka","india", helo1)
+            a.MyName()
+            let b=new MyName("vijay","bangloore","karnataka","india")
+            b.MyName()*/ 
+
+
+            //prototypes
+
+            /*function helo(name){
+                this.a=name
+            }
+            helo.prototype={
+                //method
+                display:function(){
+                    let x=`Name:${this.a}`
+                    console.log(x)
+                }
+            }
+            function helo1(city){
+                this.b=city
+            }
+            helo.protoype={
+                display1:function(){
+                    let x=`city:${this.b}`
+                    console.log(x)
+                }
+            }
+            function helo2(state){
+                this.c=state
+            }
+            helo.prototype={
+                display2:function(){
+                    let x=`state:${this.c}`
+                    console.log(x)
+                }
+            }
+            function result(name,city,state){
+                helo.call(this,name)
+                helo1.apply(this,[city])
+                let y=helo2.bind(this)
+                y(state)
+
+            }
+            result.prototype= Object.create (helo.prototype)
+            Object.assign(result.prototype,helo1.prototype)
+            Object.assign(result.prototype,helo2.prototype)
+            //object.create
+            //object.assign
+            let obj=new result("raghav","bnglr","karnataka")
+            Obj.display()
+            obj.display1()
+            obj.display2()*/ 
+            
+
+            //polymorphism--poly means many morphism means shape
+            //in one object multiple of behaviour is there
+            /*class app{
+                constructor(id,book){
+                    this.id
+                    this.book
+                }
+                result=function(){
+                    let x=`ID:${this.a}\n BOOK:${this.b}`
+                    console.log(x)
+                }
+            }
+            class app1{
+                constructor(id,book){
+                    this.id
+                    this.book
+                }
+                result=function(){
+                    let x=`ID:${this.a}\n BOOK:${this.b}`
+                    console.log(x)
+                }
+            }
+            class app2{
+                constructor(id,book){
+                    this.id
+                    this.book
+                }
+                result=function(){
+                    let x=`ID:${this.a}\n BOOK:${this.b}`
+                    console.log(x)
+                }
+            }
+            let obj=new app(1,"html")
+            obj.result()
+            let obj1=new app1(2,"css")
+            obj1.result()
+            let obj2=new app2(3,"javascript")
+            obj2.result()*/
+
+
+            //encapsulation--wrapping the data from one t6o another in single unit 
+            /*class helo{
+                constructor(){
+                    var name,city
+                }
+                get(name,city){
+                    this.a=name 
+                    this.b=city
+                }
+                set(){
+                    let x=`my name is ${this.a} i am from ${this.b}`
+                }
+            }
+            let x=new helo()
+            x.get("raghav","chennai")
+            x.set()*/
+
+            //Higher order function---one function operates another function
+
+            /*function helo(name){
+                return function(city){
+                    return "Besant technology"+name+city
+                }
+            }
+            x=helo("vijay")
+            console.log(x("bangloore"))*/ 
+            
+            //self invoking--merging of two functions
+            /*function sum(a){
+                return function(b){
+                    return a+b
+                }
+            }
+           let x= sum(2) 
+           console.log(x(3))*/ 
+
+           //rest parameter---in single parameter we are giving multiple of arguments
+           //denoted by(...)
+           /*function name(name,...city){
+           let x=`Name:${name}\n city:${city}`
+           console.log(x)
+           }
+           name("raghav","bnglr","Ap","TS")*/
+
+          // by using loops we have to add n number of values 
+          /*function add(...n){
+            total=0
+            for(let i of n){
+                total+=i
+            }
+            return total
+          }
+          let x=add(1,2,3,4,5,6) 
+          console.log(x)*/ 
+
+          //spread operator---with in the object using the condition we to add some data
+          /*let a=[1,2,3,4,]
+          let b=[5,6,7,8]
+          console.log(...a,...b) 
+
+
+          let a1=10
+          let z=a1>5 ?true:false
+          let obj={
+            name:"vijay",
+            ...(z &&
+            {
+            city:"chennai" ,
+            state:"tamilnadu"
+          }
+            )
+        }
+          console.log(obj)*/
+          
+          //Regular expressions 
+
+          // to check the patterns 
+          //they are some operators--
+          //1.quantify operators--+,*,? 
+          //+ 1time/more than one time
+          //* 0time/more than 0 time
+          //? only 1 time
+          //2. escape operator--access special characters--\
+          // group operator---[a-zA-Z0-9&*^]
+          //\d---digits
+          //\w--digits+a-z 
+          //range operators--define range
+          //or operator--either one a||b 
+          
+          //regular expression syntax
+          /^pattern&/
+          //^---starting string
+          //$---endign string
+
+          const pattern=/^Besant&$/ 
+          const input="Besant"
+          //test()
+          const result=pattern.test(input)
+          console.log(result) 
+
+
+    
+
+
+            
+
+
+
+         </script>
+    </body>
+    
+</html>

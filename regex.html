@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .success{
+            border: 2px solid green;
+        }
+        .failure{
+            border: 2px solid red;
+        }
+        .remove{
+            border:none;
+        }
+    </style>
+</head>
+<body>
+    
+    <form class="input">
+        <input type="text" id="user"> 
+        <input type="submit">
+        <div class="error">
+
+        </div>
+    </form>
+</body>
+<script>
+    const x = document.querySelector(".input")
+    const y = document.querySelector("#user")
+    const z = document.querySelector(".error")
+    x.addEventListener("keyup", (e) => {
+        e.preventDefault()
+        const input = y.value
+        const pattern = /^[a-zA-Z!@#$%^&*()-+]{6,12}$/
+        if (pattern.test(input)) {
+            console.log("iam passed")
+            z.textContent = "user name is valid"
+            x.setAttribute("class", "success")
+        }
+        else if (y.value == "") {
+            z.textContent = ""
+            x.setAttribute("class", "remove")   
+        }
+        else {
+            console.log("iam failed") 
+            z.textContent = "user name is invalid"
+            x.setAttribute("class", "failure")
+        }
+    })
+
+
+    
+</script>
+</html>

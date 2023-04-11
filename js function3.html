@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        /*function myfunction(name,city){
+            let x=`my nameis ${name} and i am from ${city}`
+            console.log(x)
+        }
+       myfunction.call(obj)
+
+        //call(),apply(),blind()----by using this we can call outer object variables and outer object parameters with in the function*/
+
+        /*const obj={
+            name:"vijay",
+            city:"banglore",
+            myfunction:function(state,country){
+           let x=`name:${this.name}\n city: ${this.city} \n state:${state}\n country:${country}`
+           console.log(x)
+
+            }
+            
+        }
+        const obj1={
+            name:"raghav",
+            city:"chennai"
+        }
+        //obj.myfunction("karnataka","india")
+        obj.myfunction.call(obj1,"tamilnadu","india")
+        obj.myfunction.apply(obj1,["tamilnadu","india"])
+        let x=obj.myfunction.bind(obj1)
+        x("tamilnadu","india")*/
+       
+        //call back functions---multiple of function we execute in one time using single line
+        //one function passed into another function as an argument*/
+         
+        /*function parent(x){
+        console.log("funct 1"+x)
+        }
+        function child(a,b,c){
+        console.log("funct 2")
+        a("html") //callback
+        b("css")
+        c("react")
+        }
+        function inner(y){
+            console.log("funct 3"+y)
+        }
+        function outer(z){
+            console.log("funct 4"+z)
+        }
+          child(parent,inner,outer)*/
+          
+          //settime out vs setinterval
+          //after time the code executing---settime out
+          //every interval code is executing repeatdly---set interval
+
+          /*setTimeout(function myname(){
+            console.log("hello")
+          },3000)
+          setTimeout(function myname(){
+            console.log("hi")
+          },4000)
+          setTimeout(function myname(){
+            console.log("good")
+          },5000)
+
+          setInterval(function myname(){
+            console.log("hello")
+          },3000) */
+          
+
+          
+        
+       
+        
+
+
+
+
+
+
+
+
+
+    </script>
+    
+</body>
+</html>

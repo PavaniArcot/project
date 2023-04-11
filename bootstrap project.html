@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>bootstrap</title>
+        <script src="https://kit.fontawesome.com/6a8057642e.js" crossorigin="anonymous"></script>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js" integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous"></script>
+        <style>
+            .marquee{
+                
+                    background-color: orange;
+                    padding:6px;
+                }
+                .item{
+                display: grid;
+                padding: 20px;
+                grid-template-columns: 30% 30% 5% 5% 5% 5% 5% 5% 5% 5% ;
+                background-color:black;
+                color: white;
+            }
+            .home{
+                display: grid;
+                grid-template-columns: 5% 20% 10% 10% 10% 10% 20% 10%;
+                background-color: rgb(0, 139, 58);
+            }
+            .home p a{
+                text-decoration: none;
+            }
+            .grad{
+                font-size: 20px;
+                padding-left: 50px;
+                padding-top: 20px;
+            }
+            .grad1{
+                padding-right: 10px;
+            }
+            .home a:hover{
+                background-color: rgb(221, 235, 235);
+                padding: 10px;
+               
+
+            }
+            section{
+                display: none;
+                position: absolute;
+                background-color:rgb(222, 129, 8);
+                padding: 4px;
+                color: wheat;
+            }
+            main:hover section{
+                display: block;
+
+            }
+            .pp{
+            display: grid;
+            grid-template-columns: auto auto auto auto;
+            grid-row-gap:10px ;
+        }
+        .pp div{
+            background-color: aquamarine;
+
+        }
+
+
+
+
+        </style>
+    </head>
+    <body>
+        <nav class="navbar navbar-expand-lg bg-body-tertiary">
+            <div class="container-fluid">
+              <a class="navbar-brand" href="#"> Technology</a>
+              <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+              </button>
+              <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                  <li class="nav-item">
+                    <a class="nav-link active" aria-current="page" href="#">Home</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="#">Link</a>
+                  </li>
+                  <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                      Dropdown
+                    </a>
+                    <ul class="dropdown-menu">
+                      <li><a class="dropdown-item" href="#">Action</a></li>
+                      <li><a class="dropdown-item" href="#">Another action</a></li>
+                      <li><hr class="dropdown-divider"></li>
+                      <li><a class="dropdown-item" href="#">Something else here</a></li>
+                    </ul>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link disabled">Disabled</a>
+                  </li>
+                </ul>
+                <form class="d-flex" role="search">
+                  <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+                  <button class="btn btn-outline-success" type="submit">Search</button>
+                </form>
+              </div>
+            </div>
+          </nav>
+        <div class="marquee">
+            <marquee behavior="alternate">our best offer ever!!summer special-get 3 courses at 22499/-only<a href="">Read more</a></marquee>
+            </div>
+            <div class="item">
+                <p>email:rjtechnology@gmail.com</p>
+                <p>contact:+91 9025741101</p>
+                <a href="https://www.facebook.com/"></a><i class="fa-brands fa-facebook"></i>
+                <a href="https://www.instagram.com/"></a><i class="fa-brands fa-square-instagram"></i>
+                <a href="https://twitter.com/"></a><i class="fa-brands fa-square-twitter"></i>
+                <a href="https://in.linkedin.com/"></a><i class="fa-brands fa-linkedin"></i>
+            </div>
+            <div class="home">
+                <b class="grad"><i class="fa-solid fa-graduation-cap"></i></b>
+                 <h3 class="grad1">ARCOT TECHNOLOGY</h3>
+                 <P><a href="">HOME</a></P>
+                 <P><a href="">About</a></P>
+                 <main>
+                 <P><a href="">Cources</a></P>
+                 <section>
+                     <p><a href="">Front end</a></p>
+                     <p><a href="">Back end</a></p>
+                 </section>
+                </main>
+                 <P><a href="">online training</a></P>
+                 <P><a href="">Contact</a></P>
+                 <P><button>Enquiry</button></P>
+                 </div>
+                 <div id="carouselExample" class="carousel slide">
+                    <div class="carousel-inner">
+                      <div class="carousel-item active">
+                        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRrMdu9JYRiJTDku_UZgvjgSR_5vtnUmSHbLA&usqp=CAU" class="d-block w-100" alt="...">
+                      </div>
+                      <div class="carousel-item">
+                        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQkjYYKr_g7Gb5rTlqS7HqSrPwvH7RwxJeFTQ&usqp=CAU" class="d-block w-100" alt="...">
+                      </div>
+                      <div class="carousel-item">
+                        <img src="https://community.nasscom.in/sites/default/files/styles/960_x_600/public/media/images/New%20Technologies%20in%20Computer%20Science%20What%27s%20Trending.jpg?itok=Fxzyq-ap" class="d-block w-100" alt="...">
+                      </div>
+                    </div>
+                    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExample" data-bs-slide="prev">
+                      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                      <span class="visually-hidden">Previous</span>
+                    </button>
+                    <button class="carousel-control-next" type="button" data-bs-target="#carouselExample" data-bs-slide="next">
+                      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                      <span class="visually-hidden">Next</span>
+                    </button>
+                  </div>
+                 <div class="container">
+                    <div class="row">
+                        <div class="col-sm-4">
+                            <div class="card" style="width:18rem;">
+                                <img src="https://cdn.pixabay.com/photo/2015/04/23/22/00/tree-736885__480.jpg">
+                                <div class="card-body">
+                                    <h5 class="card-title">card title</h5>
+                                    <p class="card-text">some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                                    <a href="#" class="btn btn-primary">Go somewhere</a>
+                                </div>
+                            </div>
+                        </div>
+                  
+                
+                        <div class="col-sm-4">
+                            <div class="card" style="width:18rem;">
+                                <img src="https://cdn.pixabay.com/photo/2015/04/23/22/00/tree-736885__480.jpg">
+                                <div class="card-body">
+                                    <h5 class="card-title">card title</h5>
+                                    <p class="card-text">some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                                    <a href="#" class="btn btn-primary">Go somewhere</a>
+                                </div>
+                            </div>
+                        </div>
+                  
+                
+                        <div class="col-sm-4">
+                            <div class="card" style="width:18rem;">
+                                <img src="https://cdn.pixabay.com/photo/2015/04/23/22/00/tree-736885__480.jpg">
+                                <div class="card-body">
+                                    <h5 class="card-title">card title</h5>
+                                    <p class="card-text">some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                                    <a href="#" class="btn btn-primary">Go somewhere</a>
+                                </div>
+                            </div>
+                        </div>
+               
+                
+                        <div class="col-sm-4">
+                            <div class="card" style="width:18rem;">
+                                <img src="https://cdn.pixabay.com/photo/2015/04/23/22/00/tree-736885__480.jpg">
+                                <div class="card-body">
+                                    <h5 class="card-title">card title</h5>
+                                    <p class="card-text">some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                                    <a href="#" class="btn btn-primary">Go somewhere</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-sm-4">
+                            <div class="card" style="width:18rem;">
+                                <img src="https://cdn.pixabay.com/photo/2015/04/23/22/00/tree-736885__480.jpg">
+                                <div class="card-body">
+                                    <h5 class="card-title">card title</h5>
+                                    <p class="card-text">some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                                    <a href="#" class="btn btn-primary">Go somewhere</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-sm-4">
+                            <div class="card" style="width:18rem;">
+                                <img src="https://cdn.pixabay.com/photo/2015/04/23/22/00/tree-736885__480.jpg">
+                                <div class="card-body">
+                                    <h5 class="card-title">card title</h5>
+                                    <p class="card-text">some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                                    <a href="#" class="btn btn-primary">Go somewhere</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <header class="pp">
+                    <div>
+                     <h3>ARCOT TECHNOLOGY</h3>
+                     <p>Lorem ipsum dolor sit amet consectetur adipisicing elit<br>. Temporibus dolorum, cumque iusto perferendis <br>a ipsa nostrum explicabo repudiandae quo modi.</p>   
+                    </div>
+                    
+                    <div>
+                        <h3>OUR SERVICES</h3>
+                        <p>mobile application design</p>
+                        <p>web application design</p>
+                        <p>websites design</p>
+                        <p>web users interface design</p>
+                        <p>web ux design and Research</p>
+                        <p>theame development design</p>
+                    </div>
+                    <div>
+                        <h3>HEAD OFFICE</h3>
+                        <p>1/2,marathalli,bengaluru<br>
+                            karnataka-560037,<br>
+                            phone:+91 9025741101<br>
+                            Email:rjtechnology@gmail.com
+                        </p>
+                        <h4>office time:10am-6pm</h4>
+                    </div>
+                    <div>
+                        <h3>subscribe us</h3>
+                        <input type="email" placeholder="enter email adress"><i id="tele" class="fa-brands fa-telegram"></i>
+                        <br><br>
+                        <div id="dec">
+                        <a href="" class="fa-brands fa-facebook"></a>
+                            <a href="" class="fa-brands fa-twitter"></a>
+                            <a href="" class="fa-brands fa-instagram"></a>
+                            <a href="" class="fa-brands fa-linkedin"></a>
+                            </div>
+                    </div>
+                </header>
+    </body>
+</html>

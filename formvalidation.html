@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h3>login form</h3>
+    <form onsubmit="validation()">
+        <label>Name:</label>
+        <input type="text" id="user1" required>
+        <br><br>
+        <label>Email:</label>
+        <input type="email" id="user2" required>
+        <br><br>
+        <label>Password:</label>
+        <input type="password" id="user3" required>
+        <br><br>
+        <label>Confirm Password:</label>
+        <input type="password" id="user4" required>
+        <br><br>
+        <input type="submit">
+        </form>
+        <h3>sign up</h3>
+    <form onsubmit="validation1()">
+        <label>Name:</label>
+        <input type="text" id="AA" required>
+        <br><br>
+        <label>Email:</label>
+        <input type="email" id="BB" required>
+        <br><br>
+        <label>Password:</label>
+        <input type="password" id="CC" required>
+        <br><br>
+        <label>Confirm Password:</label>
+        <input type="password" id="DD" required>
+        <br><br>
+        <input type="submit">
+        </form>
+        <script>
+            function validation(){
+                
+                const a=document.getElementById("user1").value 
+                const b=document.getElementById("user2").value 
+                const c=document.getElementById("user3").value 
+                const d=document.getElementById("user4").value 
+                if(a.length <=5){
+                    alert("atleast define > 5 characters")
+                }
+                else if(c !=d){
+                    alert("password does not match...!")
+    
+                    }
+                    else{
+                        alert("form succesfully submited")
+                        localStorage.setItem("Name",a)
+                        localStorage.setItem("Email" ,b) 
+                        localStorage.setItem("Password",c) 
+                    }
+                    
+            }
+            function validation1(){
+                
+                const w=document.getElementById("AA").value 
+                const x=document.getElementById("BB").value 
+                const y=document.getElementById("CC").value 
+                const z=document.getElementById("DD").value
+                if(localStorage.getItem("Name")!==w){
+                    alert("Name does not match")
+                }
+                if(localStorage.getItem("Email")!==x){
+                    alert("email does not match")
+                }
+                else{
+                    alert("login succesfully")
+                    redirect()
+                }
+
+            }
+            function redirect(){
+                window.location.href="forms.html" 
+            }
+
+
+
+
+
+
+
+
+
+
+            
+             
+    
+    
+    
+        </script>
+    
+</body>
+</html>

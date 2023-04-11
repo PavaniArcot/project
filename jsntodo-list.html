@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Todo-list</title>
+</head>
+<body>
+    <input id="user" type="text" placeholder="ENTER YOUR TODO...!" onkeypress="todo(event)">
+     <button  onClick="remove()">Remove all</button>
+     <ul id="ulist" style="list-style: none;">
+    </ul>
+        
+    
+    <script>
+         const ul=document.getElementById("ulist")
+         const input=document.getElementById("user")
+        function todo(e){
+            if(e.code === "Enter"){
+            console.log(e.target.value)
+            let x=e.target.value //current input values
+            let li=document.createElement("li") //<li></li>
+            li.innerHTML=`${x}`
+            console.log(li) 
+            let btn=document.createElement("button")//<button></button>
+            btn.textContent="Remove"
+            btn.onclick = function(){
+                li.remove();
+            }
+            //appendchild()---with in the parent<ul> we have to access child<li>
+                ul.appendChild(li)
+                li.appendChild(btn)
+                input.value=""
+
+        }
+    }
+    function remove(){
+        const ul=document.getElementById("ulist")
+        ul.innerHtml="" 
+    }
+
+    // storage 
+// 1.localstaorage -> 
+// setItem("key name","key valuee") - store  , 
+// getItem("key name") --> get  , 
+// clear()- delete
+// 2.sessionstorage
+// setItem() - store  , 
+// getItem() --> get  , 
+// clear()- delete
+
+
+ //localStorage.setItem("name","Ragahav")
+ //localStorage.setItem("email","rj@gmail.com")
+ //localStorage.setItem("age",25)
+
+ //let x=localStorage.getItem("name")
+ //document.write(x)
+ //document.write("<br/>")
+ //let y=localStorage.getItem("email")
+//document.write(y)
+//localStorage.clear()
+
+
+
+ //sessionStorage.setItem("name","vijay")
+ //sessionStorage.setItem("email","vj@gmail.com")
+ //sessionStorage.setItem("age",24)
+ //document.write("<br/>")
+ //let a=sessionStorage.getItem("name")
+ //document.write(a)
+ //document.write("<br/>")
+ //let b=sessionStorage.getItem("email")
+ //document.write(b)
+    
+    
+
+
+    </script>
+    
+</body>
+</html>

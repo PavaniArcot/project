@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<style>
+        table{
+            width: 100%;
+        }
+        th{
+            border: 1px solid black;
+            background-color: aquamarine;
+        }
+        .saranya{
+            display: grid;
+            grid-template-columns: auto auto;
+            
+            background-color: rgb(233, 238, 238);
+        }
+        .dd{
+            width:200px;
+            height:30px;
+            background-color:red;
+        }
+    
+       
+      
+</style>
+
+<body>
+
+    <div class="saranya">
+        
+        <p><i class="fa-duotone fa-bars-progress"></i>Employee Management</p>
+        <button onClick="set()"class="dd">Add employee</button>
+
+    </div>
+    
+
+    
+    <div class="employees-table">
+        <table class="list" id="employeelist">
+            <thead>
+                <tr>
+                    <th>Full Name:</th>
+                    <th>Phone Number</th>
+                    <th>Email</th>
+                    <th>Permanent Address</th>
+                    <th>Aadhar</th>
+                    <th>Password</th>
+                    <th>Edit</th>
+                </tr>
+            </thead>
+            <tbody>
+
+            </tbody>
+        </table>
+    
+     <div id="CC"style=" border: solid; width: 30%; background-color: bisque; height:420px; display: none;">
+        <form onSubmit="formSubmit()">
+            <br>
+        <label>Name:</label>
+        <input type="text" name="Name"id="user1" >
+        <br><br>
+        <label>PhoneNumber:</label>
+        <input type="text" name="PhoneNumber" id="user2">
+        <br><br>
+        <label>Email:</label>
+        <input type="text" name="Email" id="user3" >
+        <br><br>
+        <label>Permanent Address:</label>
+        <input type="text" name="PermanentAddress" id="user4" >
+        <br><br>
+        <label>Aadhar:</label>
+        <input type="text" name="Aadhar"id="user5">
+        <br><br>
+        
+        <label >Password:</label>
+        <input type="text" name="Password" id="user8">
+        <br><br>
+        <input type="checkbox" >Agree
+        <br><br>
+        <div class="form-action-buttons">
+        <input type="submit" value="submit">
+        </div>
+        </form>
+     </div>
+
+
+<script>
+    let row=null
+   function formSubmit(){
+     event.preventDefault()
+     let data=read()
+     if(row==null){
+        getData(data)
+     }
+     else{
+        reset()
+     }
+    }
+
+   
+   function read(){
+    let FormData={}
+      formData["Name"]=document.getElementById("user1").value
+      formData["PhoneNumber"]=document.getElementById("user2").value 
+      formData["Email"]=document.getElementById("user3").value
+      formData["PermanentAddress"]=document.getElementById("user4").value
+      formData["Aadhar"]=document.getElementById("user5").value
+    
+     
+      return formData
+
+   }
+   function getData(data){
+     const table=document.getElementsByTagName("tbody")[0] 
+     let row=table.insertRow(table.length)
+
+     cell1=row.insertCell(0)
+     cell1.innerHTML=data.Name
+
+     cell2=row.insertCell(1)
+     cell2.innerHTML=data.PhoneNumber
+
+     cell3=row.insertCell(2)
+     cell3.innerHTML=data.Email
+
+     cell4=row.insertCell(3)
+     cell4.innerHTML=data.PermanentAdress
+
+     cell5=row.insertCell(4)
+     cell5.innerHTML=data.Aadhar
+
+     cell6=row.insertCell(5)
+     cell6.innerHTML=data.EmployeeRole
+
+    
+    
+    
+    }
+    function set(){
+        let x=document.getElementById("CC").innerHTML
+        document.write(x)
+    }
+   
+ </script>
+</body>
+</html>

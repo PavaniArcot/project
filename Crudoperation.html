@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Document</title>
+    <style>
+        table{
+            width: 100%;
+        }
+        th{
+            border: 1px solid black;
+            background-color: aquamarine;
+        }
+    </style>
+</head>
+<body>
+    <center>
+        <h1>Crud Operations</h1>
+    <hr>
+    <div class="employee-form">
+        <form onsubmit="formSubmit()">
+            <div>
+                <label>Full Name:</label>
+                <input type="text" name="fullName" id="fullName">
+            </div>
+            <div>
+                <label>Email Id</label>
+                <input type="text" name="email" id="email">
+            </div>
+            <div>
+                <label>Salary</label>
+                <input type="text" name="salary" id="salary">
+            </div>
+            <div>
+                <label>City</label>
+                <input type="text" name="city" id="city">
+            </div>
+            <div class="form-action-buttons">
+                <input type="submit" value="submit">
+            </div>
+        </form>
+    </div>
+    <br />
+    <div class="employees-table">
+        <table class="list" id="employeelist">
+            <thead>
+                <tr>
+                    <th>Full Name:</th>
+                    <th>Email Id</th>
+                    <th>Salary</th>
+                    <th>City</th>
+                    <th>Actions</th>
+                </tr>
+            </thead>
+            <tbody>
+
+            </tbody>
+        </table>
+    </div>
+</center>
+
+<script>
+let row=null
+function formSubmit(){
+    event.preventDefault()
+   let data= read()
+   if(row== null){
+    getData(data)
+   }
+   else{
+    upadateData(data)
+   }
+    reset()
+}
+
+function read(){
+    let formData={}
+    formData["fullName"]=document.getElementById("fullName").value
+    formData["email"]=document.getElementById("email").value
+    formData['city']=document.getElementById("city").value
+    formData['salary']=document.getElementById("salary").value
+return formData
+}
+
+function getData(data){
+    const table=document.getElementsByTagName("tbody")[0]
+    let row=table.insertRow(table.length)
+
+    cell1=row.insertCell(0)
+    cell1.innerHTML=data.fullName
+
+    cell2=row.insertCell(1)
+    cell2.innerHTML=data.email
+
+    cell3=row.insertCell(2)
+    cell3.innerHTML=data.city
+
+    cell4=row.insertCell(3)
+    cell4.innerHTML=data.salary
+
+    cell5=row.insertCell(4)
+    cell5.innerHTML=`
+    <button onclick="editData(this)">Edit</button>
+    <button onclick="deleteData(this)">Delete</button> `
+}
+
+function reset(){
+    document.getElementById("fullName").value=""
+    document.getElementById("email").value=""
+    document.getElementById("city").value=""
+    document.getElementById("salary").value=""
+}
+
+function editData(td){
+    row=td.parentElement.parentElement
+    document.getElementById("fullName").value=row.cells[0].innerHTML
+    document.getElementById("email").value=row.cells[1].innerHTML
+    document.getElementById("city").value=row.cells[2].innerHTML
+    document.getElementById("salary").value=row.cells[3].innerHTML
+}
+
+function upadateData(data){
+    row.cells[0].innerHTML=data.fullName
+    row.cells[1].innerHTML=data.email
+    row.cells[2].innerHTML=data.city
+    row.cells[3].innerHTML=data.salary
+
+}
+
+function deleteData(td){
+row=td.parentElement.parentElement
+document.getElementById("employeelist").deleteRow(row.rowIndex)
+}
+
+
+
+</script>
+    
+</body>
+</html>

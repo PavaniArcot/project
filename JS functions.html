@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+ <title>Document</title>
+</head>
+<body>
+    <script>
+        // funtions -->set of statements 
+
+// syntax 
+
+// function function_name(parameters){
+
+// }
+// function_name(arguments)
+
+// function --> key word
+// function_name --> shold be writte camel case / pascal case
+// paramentsr --> ken name 
+// arguments  --> key values
+//  {} --> start & end statements
+// calling function manadatory 
+
+// function myFunction(){
+//     console.log("Hello")
+//     document.write("Hi")
+// }
+// myFunction() // calling function
+
+// function myName(){
+//     return "Besant Technology"
+// }
+// let x=myName()
+// console.log(x)
+
+// function myApp(){
+//     let y="Good Morning"
+//     // console.log(y)
+//     return y
+// }
+
+// let y=myApp()
+//  console.log(y)
+
+// var a=20
+// function myName(){
+
+//     if(a>10){
+//         console.log("true")
+//     }
+//     else if(a>30){
+//         console.log("false")
+//     }
+//     else{
+//         console.log("defaulty")
+//     }
+// }
+ 
+// console.log(a)
+// myName()
+
+
+
+var x=100 // global 
+function outer(){
+    var y=200 // local
+   function inner(){  // nested function
+    var z=300 // non -local
+    console.log(z) 
+   }
+   inner()
+   console.log(y)
+}
+outer()
+console.log(x)
+
+    </script>
+</body>
+</html>

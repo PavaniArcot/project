@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #h{
+            color:brown;
+            background-color: aqua;
+            padding: 20px;
+        }
+    </style>
+</head>
+<body>
+    
+    <button onclick="helo()">click</button>
+    <button onclick="display()">dispaly</button>
+    <button onclick="update()">update</button>
+    <button onclick="del()">Delete</button>
+    <button onclick="show()">show</button>
+    <button onclick="change_color()">change_color</button>
+    <h3 id="h">helo
+        <span id="k"></span>
+    </h3>
+    <h3 id="head">0</h3>
+    <button onclick="increment()">Inc</button>
+    <button onclick="decrement()">dec</button>
+    <button onclick="reset()">Reset</button>
+   
+   
+
+    
+    
+
+<script>
+    ///events--->are actions--they handle the function
+    //types-
+    //onclick--when u click on the onclick action will be executed
+    //ondoubleclick---two times click
+    //onmouseover---when cursor is moving actions
+    //onmouseout---when the cursor is removing action will be 
+    //onkeypress---when u press any keyword every keyword has number
+    //onkeyup---by using userinput box when u update the data,data will be change
+    //onkeychange---here we can update the data
+    function helo(){
+        alert("hello good morning")
+    }
+    function display(){
+        document.getElementsById("k").innerHTML="good morning"
+    }
+    function update(){
+        document.getElementById("h").innerHTML="besant technology"
+    }
+    function del(){
+        //document.getElementById("h").innerHTML=""
+        let x=document.getElementById("h")
+        x.style.display="none"
+    }
+    function show(){
+        document.getElementById("h")
+        x.style.display="block"
+    }
+    function change_color(){
+        let x=document.getElementById("h")
+        x.style.color="green"
+        x.style.backgroundColor="blue"
+    }
+    function increment(){
+        let x=document.getElementById("head").innerHTML
+        let value=parseInt(x)+1
+        document.getElementById("head").innerHTML=value
+
+    }
+    function decrement(){
+        let x=document.getElementById("head").innerHTML
+        let value=parseInt(x)-1
+        document.getElementById("head").innerHTML=value
+
+    }
+    function reset(){
+    document.getElementById("head").innerHTML=0
+    }
+    
+        
+
+    
+   
+    
+   
+        
+    
+   
+</script>
+</body>
+</html>

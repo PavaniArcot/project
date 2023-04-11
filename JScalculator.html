@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+       #helo{
+        text-align: center;
+       }
+    </style>
+</head>
+<body>
+    <div id="helo">
+    <input type="text" place holder="" id="display"><br><br>
+    <button onclick="displayvalue('1')">1</button>
+    <button onclick="displayvalue('2')">2</button>
+    <button onclick="displayvalue('3')">3</button>
+    <button onclick="displayvalue('+')">+</button><br><br>
+    <button onclick="displayvalue('4')">4</button>
+    <button onclick="displayvalue('5')">5</button>
+    <button onclick="displayvalue('6')">6</button>
+    <button onclick="displayvalue('-')">-</button><br><br>
+    <button onclick="displayvalue('7')">7</button>
+    <button onclick="displayvalue('8')">8</button>
+    <button onclick="displayvalue('9')">9</button>
+    <button onclick="displayvalue('*')">*</button><br><br>
+    <button onclick="displayvalue('/')">/</button>
+    <button onclick="displayvalue('c')">c</button>
+    <button onclick="displayvalue('0')">0</button>
+    <button onclick="caluculate()">=</button>
+    </div>
+    <script>
+        function displayvalue(value){
+            document.getElementById("display").value +=value;
+
+        }
+      function caluculate(){
+        try{
+            var input=eval(document.getElementById("display").value);
+            document.getElementById("display").value=input;
+        } 
+        catch (error){
+            document.getElementById("display").value=""
+        }
+      }
+    </script>
+
+
+    
+</body>
+</html>
+

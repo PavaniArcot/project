@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>css-grids</title>
+        <style>
+            *{
+                margin:0;
+            }
+          .grid p{
+             background-color: aquamarine;
+             padding:40px
+          }
+          .grid{
+            display:grid;
+            grid-template-columns: 20% 60% 20%;
+            grid-column-gap:10px;
+            grid-row-gap:20px;
+            grid-gap:20px;
+          }
+          #para1{
+            grid-row:span 3;
+          }
+          #para2{
+            grid-column:span 2;
+          }
+          #para3{
+            grid-row: span 3;
+          }
+        </style>
+    </head>
+    <body>
+        <div class="grid">
+        <p id="para1">heading1</p>
+        <p id="para2">heading2</p>
+        <p id="para3">heading3</p>
+        <p>heading4</p>
+        <p>heading5</p>
+        <p>heading6</p>
+        <p>heading7</p>
+        <p>heading8</p>
+        </div>
+    </body>
+</html>
+

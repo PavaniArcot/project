@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+     
+       /* let a="helo"----golbal--we can excess anywhere
+    function myfunction(){
+        let b="good"----local---we can excess only in the function
+        function inner(){
+            let c="morning"---non local--nested function
+            console.log(c)
+        }
+        inner()
+        console.log(b)
+    }
+    myfunction()
+    console.log(a)*/
+
+
+      /*let a="helo"----hosting
+      let b="good"
+      let c="morning"
+    function myfunction(){
+        
+        function inner(){
+            console.log(a)
+            console.log(b)
+            console.log(c)
+        }
+        inner()
+        
+    }
+    myfunction()*/
+
+
+
+    //closure method---outer function variable we can excess in within inner function
+    
+  /*function outer(){
+    var x=100
+        function inner(){
+        console.log(x)
+
+    }
+    inner()
+
+  }
+  outer()*/
+
+
+/*
+1.normal function-function key word-function name-paranathasis-curly brackets
+2.arrow function
+3.anonymous function*/
+
+
+/*2.arrow function--const-function name-=-paranthasis-arrow symbol-curly brackets
+const myName=()=>{
+
+}
+myName()
+3.anonymous function
+
+const myname=()=>{
+    console.log("hello")
+}
+myname()*/
+
+//parameters and arguments
+
+function myname(name,city,state){
+    let x="name:"+name+"\n"+"city:"+city+"\n"+"state:"+state
+    //console.log(x)
+    return x
+}
+let y=myname("raghav","bnglr","karnataka")
+console.log(y)
+let z=myname("raghav","bnglr","karnataka")
+console.log(z)
+let a=myname("raghav","bnglr","karnataka")
+console.log(a) 
+
+//2nd method
+
+/*function myname(name,city,state){
+    let x=`name:${name}\n city:${city}\n state:${state}`
+    //console.log(x)
+    return x
+}
+let y=myname("raghav","bnglr","karnataka")
+console.log(y)
+let z=myname("raghav","bnglr","karnataka")
+console.log(z)
+let a=myname("raghav","bnglr","karnataka")
+console.log(a)*/
+
+//we have another method is also there for parameters and arguments
+/*function myname(name="raghav",city="bnglr",state="karnataka"){
+    let x="name:"+name+"\n"+"city:"+city+"\n"+"state:"+state
+    //console.log(x)
+    return x
+}
+let y=myname()
+console.log(y)*/
+
+//by this method we execute only one value
+
+
+
+
+    
+
+    
+    
+
+    
+  
+    </script>
+    
+</body>
+</html>
+

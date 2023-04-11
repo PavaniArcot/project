@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <button onclick="a()">alert</button>
+    <button id="btn">click</button>
+    <p id="para"></p>
+    <button onclick="b()" id="btn1">create</button>
+    <P>count:
+        <span id="count">0</span>
+    </P>
+    <button onclick="inc()" id="h">Increment</button>
+    <button onclick="dec()" id="k">decrement</button>
+    <button id="l">Reset</button>
+
+    <div id="parent">
+        <h3 id="child">HTML</h3>
+    </div>
+
+    <script>
+        //Eventlisteners---
+        //1.addEventListener--attachEventlistener 
+        //addEventListener works in anywhere(browser)
+        //attachEventListener works in IE(internet explorer)
+
+        //2.removeEventlistener---
+
+        
+        const x=document.getElementById("btn")
+        x.addEventListener("click",a)//in events we use onclick in eventlisteners we use click
+        const btn=document.getElementById("h")
+        btn.addEventListener("click",inc)
+        const btn1=document.getElementById("k")
+        btn1.addEventListener("click",dec)
+        const btn2=document.getElementById("l")
+        btn2.addEventListener("click",reset)
+        
+
+        //event propagation---to define way of order
+        //2 types are there
+        //1.event bubbling---first child then parent when boolen value is 'false'
+        //2.event capturing---first parent then child when boolen value is 'true'
+         
+        const a1=document.getElementById("parent")
+        a1.addEventListener("click",()=>{
+            alert("this is parent element")
+        },false)
+        const a2=document.getElementById("child")
+        a2.addEventListener("click",()=>{
+            alert("this is child element")
+        },false)
+        
+       
+         function inc(){
+            let a=document.getElementById("count").innerHTML
+            let b=parseInt(a)+1
+            document.getElementById("count").innerHTML=b
+         } 
+         function dec(){
+            let a=document.getElementById("count").innerHTML
+            let b=parseInt(a)-1
+            document.getElementById("count").innerHTML=b
+         }
+         function reset(){
+            document.getElementById("count").innerHTML=0
+         }
+
+
+
+
+
+        function a(){
+            alert("hello") 
+        }
+
+        let c=document.getElementById("btn1") 
+        b.addEventListener("click",c)
+        function  b(){
+           let y= document.getElementById("para")
+           y.innerHTML="helo good morning..!"
+        }
+
+        
+
+
+
+
+    </script>
+    
+</body>
+</html>
